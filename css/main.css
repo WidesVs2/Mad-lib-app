@@ -1,0 +1,9 @@
+body {
+  background: rgb(62, 62, 165);
+  color: white;
+}
+
+#madLibStory {
+  z-index: 10000;
+  color: black;
+}

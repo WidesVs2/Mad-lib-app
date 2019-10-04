@@ -15,11 +15,206 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
-
+    <link rel="stylesheet" href="css/main.css" />
     <title>Mad Lib App</title>
   </head>
   <body>
-    <h1>Hello, world!</h1>
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="madLibStory"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="behindTheScenes"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="behindTheScenes">Behind the Scenes</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>
+              Putting on a newscast might look easy, but it takes a lot of
+              <ins id="adjective-ins-1"> </ins> work. Go behind the scenes, and
+              you'll see dozens of <ins id="adjective-ins-2"> </ins> workers
+              <ins id="verb-ing-ins"> </ins> in every direction! Reporters run
+              back and forth between the studio and locations all around (the)
+              <ins id="place-ins"> </ins> to cover
+              <ins id="adjective-ins-3"> </ins> stories and interview
+              <ins id="p-noun-1-ins"> </ins>. They are joined by videographers
+              who operate handheld <ins id="p-noun-2-ins"> </ins> to capture all
+              the action. The anchors are the people who
+              <ins id="verb-1-ins"> </ins> behind the news desk and read the
+              stories during the newscast. They have to look
+              <ins id="adjective-ins-4"> </ins> on air, so they can often be
+              found getting makeup applied to their
+              <ins id="pob-plural-ins"> </ins>. The director tells everyone
+              where and when to <ins id="verb-2-ins"> </ins>. It's easy to spot
+              a director because he wears a headset on his
+              <ins id="pob-ins"> </ins> and yells things like "Camera two!" and
+              "Cut to commercial!" and "<ins id="silly-word-ins"> </ins>!" A
+              newscast is live television, so if you make a/an
+              <ins id="adjective-ins-5"> </ins> mistake, everyone watching at
+              home on their <ins id="p-noun-3-ins"> </ins> will know!
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Displayed Form-->
+    <div class="container">
+      <div class="span12">
+        <h1 class="text-center mt-5">Word Blank Game</h1>
+        <h3 class="text-center">Fill in the form to see the story!</h3>
+
+        <form method="get" class="form-group mx-auto">
+          <div class="form-row">
+            <div class="col">
+              <label for="adjective-one">Adjective:</label
+              ><input
+                class="form-control"
+                type="text"
+                id="adjective-one"
+                required
+              />
+            </div>
+            <div class="col">
+              <label for="adjective-two">Adjective:</label
+              ><input
+                class="form-control"
+                id="adjective-two"
+                type="text"
+                required
+              />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col">
+              <label for="verb-ing">Verb ending in -ing:</label
+              ><input class="form-control" id="verb-ing" type="text" required />
+            </div>
+            <div class="col">
+              <label for="place">A place:</label
+              ><input class="form-control" id="place" type="text" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col">
+              <label for="adjective-three">Adjective:</label
+              ><input
+                class="form-control"
+                id="adjective-three"
+                type="text"
+                required
+              />
+            </div>
+            <div class="col">
+              <label for="p-noun-1">Plural Noun:</label
+              ><input class="form-control" id="p-noun-1" type="text" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col">
+              <label for="p-noun-2">Plural Noun:</label
+              ><input class="form-control" id="p-noun-2" type="text" required />
+            </div>
+            <div class="col">
+              <label for="verb-1">Verb:</label
+              ><input class="form-control" id="verb-1" type="text" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col">
+              <label for="adjective-four">Adjective:</label
+              ><input
+                class="form-control"
+                id="adjective-four"
+                type="text"
+                required
+              />
+            </div>
+            <div class="col">
+              <label for="pob-plural">Part of the Body(plural):</label
+              ><input
+                class="form-control"
+                id="pob-plural"
+                type="text"
+                required
+              />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col">
+              <label for="verb-2">Verb:</label
+              ><input class="form-control" id="verb-2" type="text" required />
+            </div>
+            <div class="col">
+              <label for="pob">Part of the Body:</label
+              ><input class="form-control" id="pob" type="text" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col">
+              <label for="silly-word">Silly Word:</label
+              ><input
+                class="form-control"
+                id="silly-word"
+                type="text"
+                required
+              />
+            </div>
+            <div class="col">
+              <label for="adjective-five">Adjective:</label
+              ><input
+                class="form-control"
+                id="adjective-five"
+                type="text"
+                required
+              />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col">
+              <label for="p-noun-3">Plural Noun:</label
+              ><input class="form-control" id="p-noun-3" type="text" required />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <button
+                id="run"
+                type="button"
+                class="btn btn-success btn-large btn-block mt-4"
+                data-toggle="modal"
+                data-target="#madLibStory"
+              >
+                Let's Play!
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
