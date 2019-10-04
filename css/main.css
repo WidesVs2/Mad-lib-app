@@ -1,9 +1,14 @@
 body {
   background: rgb(62, 62, 165);
-  color: white;
+  color: #fff;
 }
 
 #madLibStory {
   z-index: 10000;
-  color: black;
+
+  color: #000;
+}
+
+.modal {
+  background-color: #333;
 }

@@ -42,30 +42,7 @@
             </button>
           </div>
           <div class="modal-body">
-            <p>
-              Putting on a newscast might look easy, but it takes a lot of
-              <ins id="adjective-ins-1"> </ins> work. Go behind the scenes, and
-              you'll see dozens of <ins id="adjective-ins-2"> </ins> workers
-              <ins id="verb-ing-ins"> </ins> in every direction! Reporters run
-              back and forth between the studio and locations all around (the)
-              <ins id="place-ins"> </ins> to cover
-              <ins id="adjective-ins-3"> </ins> stories and interview
-              <ins id="p-noun-1-ins"> </ins>. They are joined by videographers
-              who operate handheld <ins id="p-noun-2-ins"> </ins> to capture all
-              the action. The anchors are the people who
-              <ins id="verb-1-ins"> </ins> behind the news desk and read the
-              stories during the newscast. They have to look
-              <ins id="adjective-ins-4"> </ins> on air, so they can often be
-              found getting makeup applied to their
-              <ins id="pob-plural-ins"> </ins>. The director tells everyone
-              where and when to <ins id="verb-2-ins"> </ins>. It's easy to spot
-              a director because he wears a headset on his
-              <ins id="pob-ins"> </ins> and yells things like "Camera two!" and
-              "Cut to commercial!" and "<ins id="silly-word-ins"> </ins>!" A
-              newscast is live television, so if you make a/an
-              <ins id="adjective-ins-5"> </ins> mistake, everyone watching at
-              home on their <ins id="p-noun-3-ins"> </ins> will know!
-            </p>
+            <p id="story"></p>
           </div>
           <div class="modal-footer">
             <button
@@ -87,7 +64,7 @@
         <h1 class="text-center mt-5">Word Blank Game</h1>
         <h3 class="text-center">Fill in the form to see the story!</h3>
 
-        <form method="get" class="form-group mx-auto">
+        <form method="get" class="form-group mx-auto" name="storyform">
           <div class="form-row">
             <div class="col">
               <label for="adjective-one">Adjective:</label
@@ -95,6 +72,7 @@
                 class="form-control"
                 type="text"
                 id="adjective-one"
+                name="adjective1"
                 required
               />
             </div>
@@ -104,6 +82,7 @@
                 class="form-control"
                 id="adjective-two"
                 type="text"
+                name="adjective2"
                 required
               />
             </div>
@@ -111,11 +90,23 @@
           <div class="form-row">
             <div class="col">
               <label for="verb-ing">Verb ending in -ing:</label
-              ><input class="form-control" id="verb-ing" type="text" required />
+              ><input
+                class="form-control"
+                id="verb-ing"
+                type="text"
+                name="verbing"
+                required
+              />
             </div>
             <div class="col">
               <label for="place">A place:</label
-              ><input class="form-control" id="place" type="text" required />
+              ><input
+                class="form-control"
+                id="place"
+                type="text"
+                name="Place"
+                required
+              />
             </div>
           </div>
           <div class="form-row">
@@ -125,22 +116,41 @@
                 class="form-control"
                 id="adjective-three"
                 type="text"
+                name="adjective3"
                 required
               />
             </div>
             <div class="col">
               <label for="p-noun-1">Plural Noun:</label
-              ><input class="form-control" id="p-noun-1" type="text" required />
+              ><input
+                class="form-control"
+                id="p-noun-1"
+                type="text"
+                name="pnoun1"
+                required
+              />
             </div>
           </div>
           <div class="form-row">
             <div class="col">
               <label for="p-noun-2">Plural Noun:</label
-              ><input class="form-control" id="p-noun-2" type="text" required />
+              ><input
+                class="form-control"
+                id="p-noun-2"
+                type="text"
+                name="pnoun2"
+                required
+              />
             </div>
             <div class="col">
               <label for="verb-1">Verb:</label
-              ><input class="form-control" id="verb-1" type="text" required />
+              ><input
+                class="form-control"
+                id="verb-1"
+                type="text"
+                name="verb1"
+                required
+              />
             </div>
           </div>
           <div class="form-row">
@@ -150,6 +160,7 @@
                 class="form-control"
                 id="adjective-four"
                 type="text"
+                name="adjective4"
                 required
               />
             </div>
@@ -159,6 +170,7 @@
                 class="form-control"
                 id="pob-plural"
                 type="text"
+                name="pobplural"
                 required
               />
             </div>
@@ -166,11 +178,23 @@
           <div class="form-row">
             <div class="col">
               <label for="verb-2">Verb:</label
-              ><input class="form-control" id="verb-2" type="text" required />
+              ><input
+                class="form-control"
+                id="verb-2"
+                type="text"
+                name="verb2"
+                required
+              />
             </div>
             <div class="col">
               <label for="pob">Part of the Body:</label
-              ><input class="form-control" id="pob" type="text" required />
+              ><input
+                class="form-control"
+                id="pob"
+                type="text"
+                name="pobinput"
+                required
+              />
             </div>
           </div>
           <div class="form-row">
@@ -180,6 +204,7 @@
                 class="form-control"
                 id="silly-word"
                 type="text"
+                name="sillyword"
                 required
               />
             </div>
@@ -189,6 +214,7 @@
                 class="form-control"
                 id="adjective-five"
                 type="text"
+                name="adjective5"
                 required
               />
             </div>
@@ -196,7 +222,13 @@
           <div class="form-row">
             <div class="col">
               <label for="p-noun-3">Plural Noun:</label
-              ><input class="form-control" id="p-noun-3" type="text" required />
+              ><input
+                class="form-control"
+                id="p-noun-3"
+                type="text"
+                name="pnoun3"
+                required
+              />
             </div>
           </div>
           <div class="row">
@@ -207,6 +239,7 @@
                 class="btn btn-success btn-large btn-block mt-4"
                 data-toggle="modal"
                 data-target="#madLibStory"
+                onclick="makeStory(this.form)"
               >
                 Let's Play!
               </button>
