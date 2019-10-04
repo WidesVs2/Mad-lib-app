@@ -41,5 +41,4 @@ and "${sillyWord}!" A newscast is live television, so if you make a/an ${adjecti
 watching at home on their ${pNounThree} will know!`;
 
   document.getElementById("story").innerHTML = story;
-  console.log(sillyWord);
 }
